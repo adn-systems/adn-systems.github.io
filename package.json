@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "ADN Systems landing page",
   "scripts": {
-    "build": "eleventy",
+    "build": "eleventy --serve",
     "serve": "eleventy --serve",
     "deploy": "eleventy"
   },
