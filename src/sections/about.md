@@ -1,5 +1,5 @@
 ---
-title: AWE.SOME Heading
+title: About ADN Systems
 type: about
 ---
 
