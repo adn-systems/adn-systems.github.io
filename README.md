@@ -1,17 +1,6 @@
 # 11ty-landing-page
 
-A simple landing page built with 11ty and Tailwind CSS.
 
-> Port of the [Hugo Version](https://github.com/ttntm/hugo-landing-page)
-
-## How to use this template
-
-**Requirements:**
-
-1. Eleventy (developed and tested with version 0.12.1)
-2. Tailwind CSS
-
-All other dependencies are either linked from a CDN or included in this repository.
 
 **Setup:**
 
