@@ -1,5 +1,5 @@
 
-name: Build Eleventy
+name: Build ADN Systems / Eleventy
 
 on:
   # Runs on pushes targeting the default branch
@@ -9,29 +9,16 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-  
-jobs:
-  build:
-    runs-on: ubuntu-latest
+#jobs:
+  build_deploy:
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@master
-
-      - name: Use Node.js
-        uses: actions/setup-node@v3.5.1
-      - run: npm install
-      - run: npm run build --if-present
+      - name: Build
+        uses: TartanLlama/actions-eleventy@master
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          publish_dir: ./_site
+          publish_dir: _site 
+          publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
